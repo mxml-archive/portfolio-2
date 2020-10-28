@@ -38,6 +38,24 @@ a {
 
 /* CSS */
 
+#loader {
+    width: 100vw;
+    height: 100vh;
+    background: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: transform 1s ease-in-out;
+}
+
+#loader.active {
+    transform: translateY(-100vw);
+}
+
 #marker {
     position: absolute;
     bottom: 10px;
@@ -117,21 +135,42 @@ a {
 
 .header__links a {
     font-size: 25px;
-    margin: 5px
+    margin: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header__links a i {
+    transition: transform 0.3s ease-in-out;
+}
+
+.header__links a:hover i {
+    transform: translateY(-5px);
 }
 
 .hidden-content {
     transform: translateX(100vw);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 #index {
-    background-image: url(./../img/index-bg-2.jpg);
+    background-image: url(./../img/index-bg.jpg);
     z-index: 1;
 }
 
-#index * {
-    opacity: 1;
+#index .container {
+    width: 95%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#index h1 {
+    font-size: 72px;
+}
+
+#index h2 {
+    font-size: 48px;
 }
 
 #about {
@@ -193,6 +232,11 @@ a {
 .roboto-mono-light {
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
+}
+
+.roboto-mono-bold {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
 }
 
 .p-abs {

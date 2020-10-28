@@ -2,6 +2,7 @@ const links = document.querySelectorAll('.header__menu li a');
 const pannel = document.querySelectorAll('main > section');
 const logo = document.querySelector('#logo');
 const marker = document.querySelector('#marker');
+const loader = document.querySelector('#loader');
 
 
 //function
@@ -35,7 +36,15 @@ function markerPosition(e) {
     }
 }
 
+function loaderOff() {
+    loader.classList.add('active');
+}
+
 //event
+
+window.addEventListener('load', ()=>{
+    loaderOff();
+})
 
 for (let elm of links) {
     elm.addEventListener('click', (e)=>{
