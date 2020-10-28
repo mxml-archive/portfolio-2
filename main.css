@@ -5,3 +5,25 @@
     --color-grey: #272727;
     --color-light-grey: #aeaeae;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: unset;
+    font-weight: unset;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* CSS */
