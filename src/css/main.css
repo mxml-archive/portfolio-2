@@ -12,10 +12,17 @@
     font-size: unset;
     font-weight: unset;
     box-sizing: border-box;
+    color: var(--color-white);
 }
 
 html {
     scroll-behavior: smooth;
+    background: var(--color-black);
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
 }
 
 img {
@@ -27,3 +34,12 @@ a {
 }
 
 /* CSS */
+
+
+
+
+/* MaxStats */
+
+.w-100 {
+    width: 100%;
+}
