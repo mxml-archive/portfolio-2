@@ -17,12 +17,15 @@
 
 html {
     scroll-behavior: smooth;
-    background: var(--color-black);
+    background: var(--color-grey);
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
+    position: relative;
 }
 
 img {
@@ -35,11 +38,170 @@ a {
 
 /* CSS */
 
+#marker {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    transform: translateX(-5px);
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+    opacity: 0;
+    pointer-events: none;
+}
 
+#marker.active {
+    opacity: 1;
+    pointer-events: visible;
+}
 
+#header {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    pointer-events: none;
+}
+
+#header * {
+    pointer-events: visible;
+}
+
+.header_nav {
+    width: 100%;
+    background: var(--color-black);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.header__logo {
+    width: 80px;
+    height: auto;
+}
+
+.header__menu {
+    display: flex;
+    list-style: none;
+    position: relative;
+}
+
+.header__menu li {
+    margin: 20px;
+    font-size: 25px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header__menu li.active {
+    transform: translateY(-10px);
+}
+
+.header__menu li a {
+    transition: color 0.3s ease-in-out;
+    color: var(--color-light-grey);
+}
+
+.header__menu li.active a {
+    color: var(--color-white);
+}
+
+.header__links {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.header__links a {
+    font-size: 25px;
+    margin: 5px
+}
+
+.hidden-content {
+    transform: translateX(100vw);
+    transition: transform 0.3s ease-in-out;
+}
+
+#index {
+    background-image: url(./../img/index-bg-2.jpg);
+    z-index: 1;
+}
+
+#index * {
+    opacity: 1;
+}
+
+#about {
+    background-image: url(./../img/about-bg.jpg);
+    z-index: 2;
+}
+
+#parcours {
+    background-image: url(./../img/parcours-bg.jpg);
+    z-index: 3;
+}
+
+#realisations {
+    background-image: url(./../img/realisations-bg.jpg);
+    z-index: 4;
+}
+
+#contact {
+    background-image: url(./../img/contact-bg.jpg);
+    z-index: 5;
+}
+
+/* JS */
+
+.hidden-content.active {
+    transform: translateX(0);
+}
 
 /* MaxStats */
+
+.full {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.full-percentage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-pannel {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .w-100 {
     width: 100%;
 }
+
+.t-uppercase {
+    text-transform: uppercase;
+}
+
+.roboto-mono-light {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+}
+
+.p-abs {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.p-rel {
+    position: relative;
+}
+

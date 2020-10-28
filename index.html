@@ -5,18 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maxime Lecouturier - Portfolio</title>
     <link rel="stylesheet" href="src/css/main.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto Mono', monospace; 
+    -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 <body>
-    <header>
-        <div>
-            <img src="src/img/logomaximelecouturier.png" alt="">
+    <header id="header">
+        <nav class="header_nav">
+            <a data-href="#index" id="logo" href="#" class="header__logo">
+                <img src="src/img/logomaximelecouturier.png" alt="">
+            </a>
+            <ul class="header__menu">
+                <div id="marker"></div>
+                <li><a class="t-uppercase roboto-mono-light" data-href="#about" href="#">About</a></li>
+                <li><a class="t-uppercase roboto-mono-light" data-href="#parcours" href="#">Parcours</a></li>
+                <li><a class="t-uppercase roboto-mono-light" data-href="#realisations" href="#">Réalisations</a></li>
+                <li><a class="t-uppercase roboto-mono-light" data-href="#contact" href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header__links">
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a> 
         </div>
-        <ul>
-            <li><a href="#"></a>About</li>
-            <li><a href="#"></a>Parcours</li>
-            <li><a href="#"></a>Réalisations</li>
-            <li><a href="#"></a>Contact</li>
-        </ul>
     </header>
+
+    <main class="full p-rel">
+        <section id="index" class="full-percentage p-abs bg-pannel">
+            <div class="container full-percentage">
+                <h2>Index</h2>
+            </div>
+        </section>
+        <section id="about" class="full-percentage p-abs bg-pannel hidden-content">
+            <div class="container full-percentage">
+                <h2>About</h2>
+            </div>
+        </section>
+        <section id="parcours" class="full-percentage p-abs bg-pannel hidden-content">
+            <div class="container full-percentage">
+                <h2>Parcours</h2>
+            </div>
+        </section>
+        <section id="realisations" class="full-percentage p-abs bg-pannel hidden-content">
+            <div class="container full-percentage">
+                <h2>Réalisations</h2>
+            </div>
+        </section>
+        <section id="contact" class="full-percentage p-abs bg-pannel hidden-content">
+            <div class="container full-percentage">
+                <h2>Contact</h2>
+            </div>
+        </section>
+    </main>
+
+
+
+
+    <script src="./src/js/app.js"></script>
 </body>
 </html>
