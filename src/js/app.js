@@ -3,6 +3,8 @@ const pannel = document.querySelectorAll('main > section');
 const logo = document.querySelector('#logo');
 const marker = document.querySelector('#marker');
 const loader = document.querySelector('#loader');
+const burger = document.querySelector('.header__burger');
+const menu = document.querySelector('.header__menu');
 
 
 //function
@@ -66,3 +68,15 @@ logo.addEventListener('click', ()=>{
         elm.classList.remove('active');
     }
 })
+
+//burger 
+
+burger.addEventListener('click', ()=>{
+    menu.classList.toggle('active');
+});
+
+for (let elm of links) {
+    elm.addEventListener('click', ()=>{
+        menu.classList.toggle('active');
+    });
+}

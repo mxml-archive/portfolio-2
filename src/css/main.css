@@ -123,8 +123,29 @@ a {
     color: var(--color-light-grey);
 }
 
+.header__menu li a:hover {
+    color: var(--color-white);
+}
+
 .header__menu li.active a {
     color: var(--color-white);
+}
+
+.header__burger {
+    display: none;
+    width: 50px;
+    height: 35px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger__line {
+    width: 100%;
+    background: white;
+    height: 5px;
+    border-radius: 9999px;
 }
 
 .header__links {
@@ -175,6 +196,7 @@ a {
 
 #index h1 {
     font-size: 72px;
+    line-height: 100%;
 }
 
 #index h2 {
@@ -255,5 +277,57 @@ a {
 
 .p-rel {
     position: relative;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 768px) {
+    .header__burger {
+        display: flex;
+        z-index: 1000;
+    }
+
+    .header__menu {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--color-yellow);
+        z-index: 100;
+        transform: translateX(100vw);
+        transition: transform 0.5s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .header__menu.active {
+        transform: translateX(0);
+    }
+    .header__menu li a {
+        color: var(--color-black);
+        font-weight: bold;
+    }
+    #marker {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #index h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    #index h2 {
+        font-size: 20px;
+        text-align: center;
+        margin: 10px;
+    }
 }
 
